@@ -268,7 +268,7 @@ class KQueueReactor(posixbase.PosixReactorBase):
                 continue
             else:
                 log.callWithLogger(selectable, _drdw, selectable, fd, event)
-
+                
 
     def _doWriteOrRead(self, selectable, fd, event):
         """
