@@ -90,6 +90,7 @@ def callWithLogger(logger, func, *args, **kw):
     Utility method which wraps a function in a try:/except:, logs a failure if
     one occurs, and uses the system's logPrefix.
     """
+    return func(*args, **kw) # ignore
     try:
         lp = logger.logPrefix()
     except KeyboardInterrupt:
